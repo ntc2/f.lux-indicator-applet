@@ -165,6 +165,7 @@ class Preferences(object):
         for i, t in self.temperatureKeys.items():
             if t == temperature:
                 return i
+        return 0 # Default value in case 'temperature' is not valid.
 
     def connect_widget(self, widget_name, connect_target=None,
             connect_event="activate"):
